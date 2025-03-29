@@ -20,8 +20,8 @@ const myCustomLightTheme: ThemeDefinition = {
     error: "#B00020",
     info: "#2196F3",
     success: "#4CAF50",
-    warning: "#FB8C00",
-  },
+    warning: "#FB8C00"
+  }
 };
 
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
@@ -29,7 +29,7 @@ export default createVuetify({
   theme: {
     defaultTheme: "myCustomLightTheme",
     themes: {
-      myCustomLightTheme,
-    },
-  },
+      myCustomLightTheme
+    }
+  }
 });

@@ -14,11 +14,12 @@
 
 <script setup lang="ts">
 import ResumeContainer from "./components/ResumeContainer.vue";
+import { personalInfo } from "./config/resumeConfig";
 
 function downloadResume() {
   const link = document.createElement("a");
-  link.href = "/madhu-km-resume.pdf";
-  link.download = "madhu-km-resume.pdf";
+  link.href = `/${personalInfo.pdfFilename}`;
+  link.download = personalInfo.pdfFilename;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

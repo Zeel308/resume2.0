@@ -3,6 +3,7 @@ import Components from "unplugin-vue-components/vite";
 import Vue from "@vitejs/plugin-vue";
 import Vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 import ViteFonts from "unplugin-fonts/vite";
+import vueDevTools from "vite-plugin-vue-devtools";
 
 // Utilities
 import { defineConfig } from "vite";
@@ -11,9 +12,8 @@ import { fileURLToPath, URL } from "node:url";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    Vue({
-      template: { transformAssetUrls }
-    }),
+    Vue({ template: { transformAssetUrls } }),
+    vueDevTools(),
     // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#readme
     Vuetify(),
     Components(),
