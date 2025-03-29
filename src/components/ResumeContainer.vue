@@ -11,7 +11,7 @@
         class="d-flex align-center justify-center"
       >
         <v-avatar size="125">
-          <v-img alt="Madhu KM" src="@/assets/avatar3.jpeg"></v-img>
+          <v-img :alt="fullName" :src="avatarPath"></v-img>
         </v-avatar>
       </v-col>
     </v-row>
@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, onMounted } from "vue";
+import { ref, watch, onMounted, computed } from "vue";
 import { useDisplay } from "vuetify";
 
 import ExperienceSection from "./ExperienceSection.vue";
@@ -41,6 +41,7 @@ import LanguagesSection from "./LanguagesSection.vue";
 import SkillsSection from "./SkillsSection.vue";
 import EducationSection from "./EducationSection.vue";
 import AboutSection from "./AboutSection.vue";
+import { personalInfo, themeSettings } from "../config/resumeConfig";
 
 const { mobile } = useDisplay({ mobileBreakpoint: 600 });
 
@@ -58,14 +59,43 @@ function syncScreenSizeDimensions(isMobile: boolean) {
   topColSpan.value = isMobile ? 12 : DEFAULT_TOP_COL_SPAN;
 }
 
+// Dynamic avatar path based on config
+const avatarPath = computed(
+  () => new URL(`../assets/${personalInfo.avatar}`, import.meta.url).href
+);
+const fullName = computed(
+  () => `${personalInfo.firstName} ${personalInfo.lastName}`
+);
+
 // Done to ensure in Responsive mode, the image comes on TOP
 watch(mobile, syncScreenSizeDimensions);
-onMounted(() => syncScreenSizeDimensions(mobile.value));
+onMounted(() => {
+  syncScreenSizeDimensions(mobile.value);
+
+  // Apply theme settings
+  document.documentElement.style.setProperty(
+    "--primary-color",
+    themeSettings.primaryColor
+  );
+  document.documentElement.style.setProperty(
+    "--background-color",
+    themeSettings.backgroundColor
+  );
+  document.documentElement.style.setProperty(
+    "--text-color",
+    themeSettings.textColor
+  );
+  document.documentElement.style.setProperty(
+    "--accent-color",
+    themeSettings.accentColor
+  );
+});
 </script>
 
 <style scoped lang="scss">
 .container {
-  background-color: #fff;
+  background-color: var(--background-color, #fff);
+  color: var(--text-color, #000);
   max-width: 960px;
   min-height: 1123px;
   margin: 0 auto;
@@ -86,35 +116,4 @@ onMounted(() => syncScreenSizeDimensions(mobile.value));
     padding: 1rem;
   }
 }
-
-// .min-width-20-rem {
-//   min-width: 20rem !important;
-// }
-
-/* Print styles */
-// @media print {
-//   @page {
-//     size: A4;
-//     margin: 0;
-//   }
-
-//   body {
-//     margin: 0;
-//   }
-
-//   .resume-container {
-//     width: 100%;
-//     height: auto;
-//     margin: 0;
-//     padding: 0;
-//     box-shadow: none;
-//   }
-
-//   /* Additional styles to ensure correct printing */
-//   /* Example: Remove backgrounds that won't print correctly */
-//   .resume-container img {
-//     max-width: 100%;
-//     height: auto;
-//   }
-// }
 </style>

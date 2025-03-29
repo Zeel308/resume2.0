@@ -16,22 +16,5 @@
 </template>
 
 <script setup lang="ts">
-const languages = [
-  {
-    name: "English",
-    proficiency: "Advanced",
-  },
-  {
-    name: "Hindi",
-    proficiency: "Proficient",
-  },
-  {
-    name: "Tamil",
-    proficiency: "Intermediate",
-  },
-  {
-    name: "Malayalam",
-    proficiency: "Intermediate",
-  },
-];
+import { languages } from '../config/resumeConfig';
 </script>
