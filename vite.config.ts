@@ -22,21 +22,21 @@ export default defineConfig({
         families: [
           {
             name: "Roboto",
-            styles: "wght@100;300;400;500;700;900",
-          },
-        ],
-      },
-    }),
+            styles: "wght@100;300;400;500;700;900"
+          }
+        ]
+      }
+    })
   ],
   define: { "process.env": {} },
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
+      "@": fileURLToPath(new URL("./src", import.meta.url))
     },
-    extensions: [".js", ".json", ".jsx", ".mjs", ".ts", ".tsx", ".vue"],
+    extensions: [".js", ".json", ".jsx", ".mjs", ".ts", ".tsx", ".vue"]
   },
   server: {
     host: true,
-    port: 3000,
-  },
+    port: 3000
+  }
 });
