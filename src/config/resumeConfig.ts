@@ -1,81 +1,53 @@
 // Resume Configuration
-// Edit this file to customize your resume
 
 // Basic Information
 export const personalInfo = {
-  firstName: "Madhusoodhanan",
-  lastName: "KM",
-  title: "Full Stack Developer",
-  avatar: "avatar3.jpeg", // Place this file in src/assets
+  firstName: "Zeel",
+  lastName: "Gor",
+  title: "QA Automation Engineer",
   summary:
-    "Tech aficionado with 5+ years of experience embracing the full-stack frenzy of " +
-    new Date().getFullYear() +
-    "—conceptualizing, R&D, coding, testing, and cloud deployment. A one-person IT army, reveling in the end-to-end adventure.",
-  pdfFilename: "madhu-km-resume.pdf" // This will be used for both download and generation
+    "Tech Zealot with 2+ years in Software Testing, Test Automation, Test script development, and marketing coordination. Skilled in functional, API, regression, UI, and exploratory testing, with a focus on quality assurance, user experience, and cross-functional collaboration.",
 };
 
 // Contact Information
 export const contactInfo = [
-  { icon: "mdi-phone", title: "+91-9738575801", link: "tel:+919738575801" },
+  { icon: "mdi-phone", title: "+91 9106385218", link: "tel:+919106385218" },
   {
-    icon: "mdi-github",
-    title: "gammaSpeck",
-    link: "https://github.com/gammaSpeck"
+    icon: "mdi-email",
+    title: "zeelgor009@gmail.com",
+    link: "mailto:zeelgor009@gmail.com"
   },
   {
     icon: "mdi-linkedin",
-    title: "madhusoodhanan-km",
-    link: "https://www.linkedin.com/in/madhusoodhanan-km"
+    title: "zeel-gor-91056b213",
+    link: "https://www.linkedin.com/in/zeel-gor-91056b213"
   },
   {
-    icon: "mdi-email",
-    title: "tech@madhukm.com",
-    link: "mailto:tech@madhukm.com"
-  },
-  { icon: "mdi-home", title: "Bengaluru, Karnataka, India" }
+    icon: "mdi-home",
+    title: "Ahmedabad, Gujarat"
+  }
 ];
 
 // Experience
 export const experience = {
   sections: [
     {
-      company: "Ollion",
-      summary: "Worked extensively on DataPipes which is a cloud native Data Management Platform.",
+      company: "MyTradeZone",
+      summary: "",
       positions: [
         {
           id: 1,
-          title: "Lead Product Developer",
-          timeline: "Apr 2023 - Present",
-          desc: "Orchestrated the end-to-end management of code and infrastructure for all front-end microservices, led a team of two skilled developers, completed the entire project migration from Vue 2 to Vue 3, and represented the product at international tech events to drive market visibility and engagement."
-        },
-        {
-          id: 2,
-          title: "Senior Developer",
-          timeline: "Apr 2022 - Apr 2023",
-          desc: "Owned multiple critical components, executed a comprehensive migration from Webpack to Vite, and collaborated closely with UX teams to enhance user experience and streamline front-end performance."
-        },
-        {
-          id: 3,
-          title: "Developer",
-          timeline: "May 2021 - Apr 2022",
-          desc: "Contributed to the migration from JavaScript to TypeScript, optimized containerization processes, developed multiple web pages, and authored numerous REST APIs for the backend."
-        }
-      ]
-    },
-    {
-      company: "Cardinal Health",
-      summary:
-        "Healthcare providers in the US use our software to communicate digitally with patients about their health.",
-      positions: [
-        {
-          title: "Associate Software Engineer",
-          timeline: "Jun 2019 - May 2021",
-          desc: "Built architectural frameworks in NodeJS and React.js, architected and deployed a project to Kubernetes while mentoring the team through the SDLC, designed and launched the MVP for an Admin Console used by clients and support teams, owned multiple components, and served as a technical interviewer for campus recruitment."
-        },
-        {
-          title: "Software Engineering Intern",
-          timeline: "Jan 2019 - Jun 2021",
-          desc: "Developed microservices using the Serverless Framework and created a shared repository of reusable modules."
+          title: "QA Automation Engineer",
+          timeline: "September 2023 – Present",
+          desc: `Executed 150+ test cases across functional, API, regression and UI testing — leading to a 35% reduction in post-build release bugs.
+
+Created and maintained test scripts using TestRail and Cypress, improving testing efficiency by 40% over manual cycles.
+
+Detected and logged 300+ bugs with a high resolution rate through close collaboration with the development team.
+
+Contributed to cross-functional sprint planning, enhancing QA coverage and release predictability.
+
+Supported B2B marketing efforts by launching campaigns in Hong Kong and Vietnam.`
         }
       ]
     }
@@ -84,88 +56,67 @@ export const experience = {
 
 // Languages
 export const languages = [
-  {
-    name: "English",
-    proficiency: "Advanced"
-  },
-  {
-    name: "Hindi",
-    proficiency: "Proficient"
-  },
-  {
-    name: "Tamil",
-    proficiency: "Intermediate"
-  },
-  {
-    name: "Malayalam",
-    proficiency: "Intermediate"
-  }
+  { name: "English", proficiency: "Advanced" },
+  { name: "Hindi", proficiency: "Native" },
+  { name: "Gujarati", proficiency: "Native" },
+  { name: "Kutchi", proficiency: "Native" }
 ];
 
 // Skills
 export const skills = {
   codingLanguages: [
-    { title: "Javascript", icon: "mdi-language-javascript" },
-    { title: "Typescript", icon: "mdi-language-typescript" },
+    { title: "JavaScript", icon: "mdi-language-javascript" },
     { title: "Python", icon: "mdi-language-python" },
-    { title: "Shell", icon: "mdi-powershell" }
+    { title: "Bash", icon: "mdi-console" },
+    { title: "JSON/YAML", icon: "mdi-code-json" }
   ],
-  frontend: [
-    "Vue",
-    "Vite",
-    "React",
-    "NextJS",
-    "Nuxt",
-    "MUI",
+  frontend: ["UI Testing", "Cross-browser Testing", "Exploratory Testing"],
+  backend: ["API Testing (REST & GraphQL)", "Regression Testing", "Risk-based Testing"],
+  devops: ["CI/CD", "Docker (QA Env)", "Jenkins", "Sentry", "LogRocket"],
+  tools: [
+    "Postman",
     "Cypress",
-    "Playwright",
-    "Web Components"
-  ],
-  backend: [
-    "NodeJS",
-    "Express",
-    "NestJS",
-    "FastAPI",
-    "OpenAPI Spec",
-    "WebSockets",
-    "Serverless",
-    "RDBMS",
-    "Neo4j",
-    "MongoDB",
-    "NATS"
-  ],
-  devops: ["AWS", "CICD", "Docker", "Kubernetes", "HELM", "Terraform", "Jenkins", "k6", "Grafana"]
+    "Selenium",
+    "TestRail",
+    "BrowserStack",
+    "Charles Proxy",
+    "Swagger",
+    "Xray",
+    "Jira",
+    "GitHub"
+  ]
 };
 
 // Education
 export const education = [
   {
-    degree: "Bachelors in CS Engineering",
-    grade: "CGPA 7.3/10",
-    school: "CMRIT",
-    from: "2015",
-    to: "2019"
+    degree: "Masters in Bioinformatics",
+    grade: "CGPA: 7.4/10",
+    school: "Gujarat University",
+    from: "2022",
+    to: "2024"
   },
   {
-    degree: "PUC - PCMB",
-    grade: "84%",
-    school: "Christ Junior College",
-    from: "2013",
-    to: "2015"
+    degree: "Bachelors in Biochemistry",
+    grade: "CGPA: 8.7/10",
+    school: "MG Science Institute",
+    from: "2019",
+    to: "2022"
   },
   {
     degree: "Secondary Education",
-    grade: "92%",
-    school: "St Thomas Public School",
+    grade: "78%",
+    school: "Doon Public School",
     from: "",
-    to: "2013"
+    to: ""
   }
 ];
 
-// Theme settings
+// Theme settings (you can keep this unchanged or tweak colors)
 export const themeSettings = {
-  primaryColor: "#1867C0", // Default Vuetify primary color
+  primaryColor: "#1867C0",
   backgroundColor: "#fff",
   textColor: "#000",
   accentColor: "#1867C0"
 };
+
