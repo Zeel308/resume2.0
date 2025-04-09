@@ -11,6 +11,7 @@ import { fileURLToPath, URL } from "node:url";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/resume2.0/",
   plugins: [
     Vue({ template: { transformAssetUrls } }),
     vueDevTools(),
