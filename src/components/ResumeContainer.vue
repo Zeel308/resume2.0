@@ -1,6 +1,6 @@
 <template>
   <div class="resume-wrapper">
-    <v-container class="container">
+    <v-container class="container" style="max-width: 1000px;">
     <v-row class="justify-end">
   <v-tooltip text="Download Resume" location="bottom">
     <template #activator="{ props }">
