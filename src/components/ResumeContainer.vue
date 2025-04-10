@@ -27,8 +27,8 @@
     <v-img
   src="/profile-photo.jpg"
   alt="My Photo"
-  width="160"
-  height="160"
+  width="180"
+  height="180"
   class="rounded"
   contain
 />
