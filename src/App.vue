@@ -13,6 +13,6 @@ import ResumeContainer from "./components/ResumeContainer.vue";
 
 <style scoped lang="scss">
 .main-container {
-  background-color: lightgrey;
+  background-color: #ffffff;
 }
 </style>
