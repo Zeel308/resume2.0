@@ -1,6 +1,6 @@
 <template>
   <div class="resume-wrapper">
-    <v-container class="container" style="max-width: 1000px;">
+    <v-container>
       <v-row class="justify-end">
         <v-tooltip text="Download Resume" location="bottom">
           <template #activator="{ props }">
@@ -37,7 +37,6 @@
   </div>
 </template>
 
-
 <script setup lang="ts">
 import { ref, watch, onMounted } from "vue";
 import { useDisplay } from "vuetify";
@@ -65,14 +64,10 @@ function syncScreenSizeDimensions(isMobile: boolean) {
   topColSpan.value = isMobile ? 12 : DEFAULT_TOP_COL_SPAN;
 }
 
-// Dynamic avatar path based on config
-
-// Done to ensure in Responsive mode, the image comes on TOP
 watch(mobile, syncScreenSizeDimensions);
 onMounted(() => {
   syncScreenSizeDimensions(mobile.value);
 
-  // Apply theme settings
   document.documentElement.style.setProperty(
     "--primary-color",
     themeSettings.primaryColor
@@ -93,15 +88,9 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-.resume-container {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+.resume-wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 24px;
 }
 </style>
