@@ -39,15 +39,14 @@ export const experience = {
           id: 1,
           title: "QA Automation Engineer",
           timeline: "September 2023 – Present",
-          desc: `Executed 150+ test cases across functional, API, regression and UI testing — leading to a 35% reduction in post-build release bugs.
+          desc: [
+             "Executed 150+ test cases across functional, API, regression and UI testing – leading to a 35% reduction in post-build release bugs.",
+             "Created and maintained test scripts using TestRail and Cypress, improving testing efficiency by 40% over manual cycles.",
+             "Detected and logged 300+ bugs with a high resolution rate through close collaboration with the development team.",
+             "Contributed to cross-functional sprint planning, enhancing QA coverage and release predictability.",
+             "Supported B2B marketing efforts by launching marketing campaigns in Hong Kong and Vietnam."
+          ]
 
-Created and maintained test scripts using TestRail and Cypress, improving testing efficiency by 40% over manual cycles.
-
-Detected and logged 300+ bugs with a high resolution rate through close collaboration with the development team.
-
-Contributed to cross-functional sprint planning, enhancing QA coverage and release predictability.
-
-Supported B2B marketing efforts by launching campaigns in Hong Kong and Vietnam.`
         }
       ]
     }
