@@ -25,7 +25,7 @@
   <!-- Right section: Image -->
   <v-col cols="4" :order="topColOrders.image" class="d-flex justify-center align-center">
     <v-avatar size="120">
-      <img src="/my-photo.jpg" alt="My Photo" />
+      <img src="/profile-photo.jpg" alt="My Photo" />
     </v-avatar>
   </v-col>
 </v-row>
