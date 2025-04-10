@@ -10,11 +10,11 @@
       >
         <div class="d-flex flex-column">
           <div class="company-name">
-  {{ section.company }}
-</div>
-<div class="company-summary">
-  {{ section.summary }}
-</div>
+            {{ section.company }}
+          </div>
+          <div class="company-summary">
+            {{ section.summary }}
+          </div>
         </div>
 
         <div class="d-flex flex-column ga-2">
@@ -41,5 +41,14 @@ import { experience } from "../config/resumeConfig";
 <style lang="scss" scoped>
 .custom-timeline {
   row-gap: 10px !important;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-bottom: 2px solid black;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
 }
 </style>
