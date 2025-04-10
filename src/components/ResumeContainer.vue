@@ -1,70 +1,42 @@
 <template>
   <div class="resume-wrapper">
     <v-container class="container" style="max-width: 1000px;">
-    <v-row class="justify-end">
-  <v-tooltip text="Download Resume" location="bottom">
-    <template #activator="{ props }">
-      <v-btn
-        icon
-        href="/resume.pdf"
-        download
-        class="ma-2"
-        v-bind="props"
-      >
-        <v-icon>mdi-download</v-icon>
-      </v-btn>
-    </template>
-  </v-tooltip>
-</v-row>
+      <v-row class="justify-end">
+        <v-tooltip text="Download Resume" location="bottom">
+          <template #activator="{ props }">
+            <v-btn icon href="/resume.pdf" download class="ma-2" v-bind="props">
+              <v-icon>mdi-download</v-icon>
+            </v-btn>
+          </template>
+        </v-tooltip>
+      </v-row>
 
-    <v-row>
-  <!-- Left section: About info -->
-  <v-col :cols="topColSpan" :order="topColOrders.info">
-    <AboutSection />
-  </v-col>
+      <v-row>
+        <!-- LEFT COLUMN -->
+        <v-col cols="8" class="d-flex flex-column ga-6">
+          <AboutSection />
+          <ExperienceSection />
+          <EducationSection />
+        </v-col>
 
-  <!-- Right section: Image -->
-  <v-col cols="4" :order="topColOrders.image" class="d-flex justify-center align-center">
-    <v-img
-  src="/profile-photo.jpg"
-  alt="My Photo"
-  width="180"
-  height="180"
-  class="rounded"
-  contain
-/>
-  </v-col>
-</v-row>
-
-
-    <!-- ********** -->
-
-    <v-row>
-  <!-- LEFT COLUMN: Full content area -->
-  <v-col cols="8" class="d-flex flex-column ga-6">
-    <AboutSection />
-    <ExperienceSection />
-    <EducationSection />
-  </v-col>
-
-  <!-- RIGHT SIDEBAR: Photo + Skills + Languages -->
-  <v-col cols="4" class="d-flex flex-column align-center ga-4">
-    <v-img
-      src="/profile-photo.jpg"
-      alt="My Photo"
-      width="180"
-      height="180"
-      class="rounded"
-      contain
-    />
-    <SkillsSection />
-    <LanguagesSection />
-  </v-col>
-</v-row>
-
-  </v-container>
-    </div>
+        <!-- RIGHT SIDEBAR -->
+        <v-col cols="4" class="d-flex flex-column align-center ga-4">
+          <v-img
+            src="/profile-photo.jpg"
+            alt="My Photo"
+            width="180"
+            height="180"
+            class="rounded"
+            contain
+          />
+          <SkillsSection />
+          <LanguagesSection />
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
+
 
 <script setup lang="ts">
 import { ref, watch, onMounted } from "vue";
