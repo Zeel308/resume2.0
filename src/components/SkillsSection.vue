@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column ga-2 w-100">
+  <div class="d-flex flex-column ga-2 w-100 mt-6">
     <div
       class="text-h5 font-weight-bold text-uppercase border-b-lg border-opacity-100"
     >
