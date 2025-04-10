@@ -52,5 +52,4 @@ import { experience } from "../config/resumeConfig";
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-}
 </style>
