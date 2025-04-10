@@ -24,9 +24,14 @@
 
   <!-- Right section: Image -->
   <v-col cols="4" :order="topColOrders.image" class="d-flex justify-center align-center">
-    <v-avatar size="120">
-      <img src="/profile-photo.jpg" alt="My Photo" />
-    </v-avatar>
+    <v-img
+  src="/profile-photo.jpg"
+  alt="My Photo"
+  width="120"
+  height="120"
+  class="rounded"
+  contain
+/>
   </v-col>
 </v-row>
 
