@@ -9,16 +9,16 @@
     <!-- ********** -->
 
     <v-row>
-      <v-col :cols="leftSectionColSpan" class="d-flex flex-column ga-4">
-        <ExperienceSection />
-        <LanguagesSection />
-      </v-col>
+  <v-col :cols="leftSectionColSpan" class="d-flex flex-column ga-4">
+    <ExperienceSection />
+    <EducationSection />
+  </v-col>
 
-      <v-col class="d-flex flex-column ga-4">
-        <SkillsSection />
-        <EducationSection />
-      </v-col>
-    </v-row>
+  <v-col class="d-flex flex-column ga-4">
+    <SkillsSection />
+    <LanguagesSection />
+  </v-col>
+</v-row>
   </v-container>
 </template>
 
