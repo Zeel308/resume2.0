@@ -17,10 +17,19 @@
 </v-row>
 
     <v-row>
-      <v-col :cols="topColSpan" :order="topColOrders.info">
-        <AboutSection />
-      </v-col>
-    </v-row>
+  <!-- Left section: About info -->
+  <v-col :cols="topColSpan" :order="topColOrders.info">
+    <AboutSection />
+  </v-col>
+
+  <!-- Right section: Image -->
+  <v-col cols="4" :order="topColOrders.image" class="d-flex justify-center align-center">
+    <v-avatar size="120">
+      <img src="/my-photo.jpg" alt="My Photo" />
+    </v-avatar>
+  </v-col>
+</v-row>
+
 
     <!-- ********** -->
 
