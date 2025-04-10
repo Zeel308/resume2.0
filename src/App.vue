@@ -8,7 +8,6 @@
 
 <script setup lang="ts">
 import ResumeContainer from "./components/ResumeContainer.vue";
-import { personalInfo } from "./config/resumeConfig";
 
 </script>
 
