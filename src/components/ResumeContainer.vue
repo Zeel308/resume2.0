@@ -115,19 +115,20 @@ onMounted(() => {
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-  border-style: solid;
-  border-width: 0.8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
 
-  padding: 2rem;
+  padding: 3rem 2.5rem;
 
   @media (max-width: 600px) {
-    // Breakpoint for sm and below
-    padding: 1.5rem 2rem;
+    padding: 2rem;
   }
 
   @media (max-width: 480px) {
-    // Breakpoint for xs and below
-    padding: 1rem;
+    padding: 1.2rem;
+  }
+}
+
   }
 }
 </style>
