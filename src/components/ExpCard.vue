@@ -7,7 +7,7 @@
     </div>
 
     <ul class="text-body-2">
-      <li v-for="(line, index) in descLines" :key="index">{{ line }}</li>
+      <li v-for="(line, index) in desc" :key="index">{{ line }}</li>
     </ul>
   </div>
 </template>
@@ -16,13 +16,10 @@
 interface IProps {
   title: string;
   timeline: string;
-  desc: string;
+  desc: string[]; // ✅ expects an array
 }
 
-const props = defineProps<IProps>();
-
-// Split the description into lines
-const descLines = props.desc.split('\n').filter(line => line.trim() !== '');
+defineProps<IProps>();
 </script>
 
 <style scoped></style>
