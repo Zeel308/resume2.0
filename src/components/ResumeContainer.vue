@@ -1,5 +1,21 @@
 <template>
   <v-container class="container">
+    <v-row class="justify-end">
+  <v-tooltip text="Download Resume" location="bottom">
+    <template #activator="{ props }">
+      <v-btn
+        icon
+        href="/resume.pdf"
+        download
+        class="ma-2"
+        v-bind="props"
+      >
+        <v-icon>mdi-download</v-icon>
+      </v-btn>
+    </template>
+  </v-tooltip>
+</v-row>
+
     <v-row>
       <v-col :cols="topColSpan" :order="topColOrders.info">
         <AboutSection />
