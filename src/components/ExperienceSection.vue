@@ -1,10 +1,6 @@
 <template>
   <div class="d-flex flex-column ga-2 w-100">
-    <div
-      class="text-h5 font-weight-bold text-uppercase border-b-lg border-opacity-100"
-    >
-      EXPERIENCE
-    </div>
+    <div class="section-title">EXPERIENCE</div>
 
     <div class="d-flex flex-column justify-start ga-2">
       <div
@@ -13,12 +9,12 @@
         :key="index"
       >
         <div class="d-flex flex-column">
-          <div class="text-h6 font-weight-medium text-primary">
-            {{ section.company }}
-          </div>
-          <div class="text-body-2 d-inline-flex gc-1">
-            {{ section.summary }}
-          </div>
+          <div class="company-name">
+  {{ section.company }}
+</div>
+<div class="company-summary">
+  {{ section.summary }}
+</div>
         </div>
 
         <div class="d-flex flex-column ga-2">
