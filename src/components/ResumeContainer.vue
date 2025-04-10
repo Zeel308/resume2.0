@@ -107,28 +107,15 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-.container {
-  background-color: var(--background-color, #fff);
-  color: var(--text-color, #000);
-  max-width: 960px;
-  min-height: 1123px;
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.resume-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-
-  padding: 3rem 2.5rem;
-
-  @media (max-width: 600px) {
-    padding: 2rem;
-  }
-
-  @media (max-width: 480px) {
-    padding: 1.2rem;
-  }
-}
-
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 </style>
