@@ -1,5 +1,6 @@
 <template>
-  <v-container class="container">
+  <div class="resume-wrapper">
+    <v-container class="container">
     <v-row class="justify-end">
   <v-tooltip text="Download Resume" location="bottom">
     <template #activator="{ props }">
@@ -50,6 +51,7 @@
   </v-col>
 </v-row>
   </v-container>
+    </div>
 </template>
 
 <script setup lang="ts">
