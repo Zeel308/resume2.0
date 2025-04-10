@@ -4,16 +4,6 @@
       <v-col :cols="topColSpan" :order="topColOrders.info">
         <AboutSection />
       </v-col>
-
-      <v-col
-        :order="topColOrders.image"
-        align-self="center"
-        class="d-flex align-center justify-center"
-      >
-        <v-avatar size="125">
-          <v-img :alt="fullName" :src="avatarPath"></v-img>
-        </v-avatar>
-      </v-col>
     </v-row>
 
     <!-- ********** -->
@@ -60,12 +50,6 @@ function syncScreenSizeDimensions(isMobile: boolean) {
 }
 
 // Dynamic avatar path based on config
-const avatarPath = computed(
-  () => new URL(`../assets/${personalInfo.avatar}`, import.meta.url).href
-);
-const fullName = computed(
-  () => `${personalInfo.firstName} ${personalInfo.lastName}`
-);
 
 // Done to ensure in Responsive mode, the image comes on TOP
 watch(mobile, syncScreenSizeDimensions);
