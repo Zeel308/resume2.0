@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, onMounted, computed } from "vue";
+import { ref, watch, onMounted } from "vue";
 import { useDisplay } from "vuetify";
 
 import ExperienceSection from "./ExperienceSection.vue";
@@ -31,7 +31,7 @@ import LanguagesSection from "./LanguagesSection.vue";
 import SkillsSection from "./SkillsSection.vue";
 import EducationSection from "./EducationSection.vue";
 import AboutSection from "./AboutSection.vue";
-import { personalInfo, themeSettings } from "../config/resumeConfig";
+import { themeSettings } from "../config/resumeConfig";
 
 const { mobile } = useDisplay({ mobileBreakpoint: 600 });
 
