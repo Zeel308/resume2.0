@@ -44,11 +44,13 @@ import { experience } from "../config/resumeConfig";
 }
 
 .section-title {
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: 800; // heavier bold
+  font-size: 1.4rem; // slightly larger
   border-bottom: 2px solid black;
   padding-bottom: 4px;
   margin-bottom: 12px;
   letter-spacing: 1px;
+  text-transform: uppercase;
+}
 }
 </style>
