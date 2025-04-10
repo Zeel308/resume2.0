@@ -40,16 +40,28 @@
     <!-- ********** -->
 
     <v-row>
-  <v-col :cols="leftSectionColSpan" class="d-flex flex-column ga-4">
+  <!-- LEFT COLUMN: Full content area -->
+  <v-col cols="8" class="d-flex flex-column ga-6">
+    <AboutSection />
     <ExperienceSection />
     <EducationSection />
   </v-col>
 
-  <v-col class="d-flex flex-column ga-4">
+  <!-- RIGHT SIDEBAR: Photo + Skills + Languages -->
+  <v-col cols="4" class="d-flex flex-column align-center ga-4">
+    <v-img
+      src="/profile-photo.jpg"
+      alt="My Photo"
+      width="180"
+      height="180"
+      class="rounded"
+      contain
+    />
     <SkillsSection />
     <LanguagesSection />
   </v-col>
 </v-row>
+
   </v-container>
     </div>
 </template>
