@@ -62,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, onMounted } from "vue";
+import { onMounted } from "vue";
 import { useDisplay } from "vuetify";
 
 import ExperienceSection from "./ExperienceSection.vue";
