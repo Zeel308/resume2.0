@@ -12,27 +12,27 @@
       </v-row>
 
       <v-row>
-        <!-- LEFT COLUMN -->
-        <v-col cols="8" class="d-flex flex-column ga-6">
-          <AboutSection />
-          <ExperienceSection />
-          <EducationSection />
-        </v-col>
+  <!-- LEFT COLUMN: Will take full width on mobile, 8 columns on medium+ screens -->
+  <v-col cols="12" md="8" class="d-flex flex-column ga-6">
+    <AboutSection />
+    <ExperienceSection />
+    <EducationSection />
+  </v-col>
 
-        <!-- RIGHT SIDEBAR -->
-        <v-col cols="4" class="d-flex flex-column align-center ga-4">
-          <v-img
-            src="/profile-photo.jpg"
-            alt="My Photo"
-            width="180"
-            height="180"
-            class="rounded"
-            contain
-          />
-          <SkillsSection />
-          <LanguagesSection />
-        </v-col>
-      </v-row>
+  <!-- RIGHT SIDEBAR: Will take full width on mobile, 4 columns on medium+ screens -->
+  <v-col cols="12" md="4" class="d-flex flex-column align-center ga-4">
+    <v-img
+      src="/profile-photo.jpg"
+      alt="My Photo"
+      width="180"
+      height="180"
+      class="rounded"
+      contain
+    />
+    <SkillsSection />
+    <LanguagesSection />
+  </v-col>
+</v-row>
     </v-container>
   </div>
 </template>
